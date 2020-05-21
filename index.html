@@ -1,0 +1,239 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="css.css">
+
+<script src="https://kit.fontawesome.com/49b6afab5a.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="odometer.css" />
+<script src="odometer.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
+
+
+</head>
+
+<script>
+
+$(document).ready(function(){
+
+var chanName = "UC6grX6MztAPYfqw6oM_UyCg";
+
+        
+ loadChan(chanName);
+      
+    
+
+
+                  
+setInterval(time, 1000);
+
+function loadChan(chan){
+
+    
+        $.getJSON("https://www.googleapis.com/youtube/v3/channels?part=statistics&id="+chan+"&key=AIzaSyCbLuTRqm4lcZ1Ky0UvzL6WzH5LupnICEA", function(data){
+
+            $('#odometer').html(data.items[0].statistics.subscriberCount);
+
+            var subs = data.items[0].statistics.subscriberCount;
+            if(subs <= 50){
+                $(".progress").width(subs*8);
+                $(".progress").html(subs*2 + "%");
+                $(".progress").fadeTo("fast",1.0);
+            
+            }else{
+                $(".progress").width(400);
+                $(".progress").html(subs*2 + "%");
+                $(".progress").fadeTo("fast",1.0);
+            }
+           
+         }).fail(function(){
+            
+            console.log("request failed!");
+            $(".progress-bar").remove();
+            $('#odometer').remove();
+            $("#error").html("Error! Request denied 403!");
+
+        });
+   
+
+    
+   
+}
+
+
+function time(){
+    var date = new Date();
+
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    
+
+
+     if(minutes == 00 && seconds == 00|| minutes == 15 && seconds == 00|| minutes == 30 && seconds == 00|| minutes==45 && seconds == 00){
+      
+        loadChan(chanName);
+       
+        
+
+       
+         
+     }
+
+}
+
+
+
+
+
+});
+
+</script>
+
+<body>
+<header>
+    <div class="koxy">POTEZNEKOXY</div>
+    <nav>
+
+   
+        
+        <ul class="links">
+            <li><a href="#home">Domek</a></li>
+            <li><a href="#about">O nas</a></li>         
+            <li><a href="#portfolio">Co robimy</a></li>
+            <li><a href="#kolbudzka16">#Kolbudzka16</a></li>
+
+
+
+
+        </ul>
+        
+
+    
+        
+    </nav>
+   
+</header>
+
+<hr>
+<h1 id="home"></h1>
+<h1></h1>
+<div class="home" >
+    <h2>Domek</h2>
+<div class="text">
+
+No ogólnie to zajebisci jesteśmy we wszystkim co robimy<br> a jak nie to tak. No i tak btw to robimy (t)rap<br>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 id="about"></h1>
+<h1></h1>
+<div class="about">
+    <h2>O nas</h2>
+    <div class="text">
+        No ogolnie to założyliśmy sobie ten shit jakoś na początku roku 2020<br> i no robimy sobie co nam sie podoba<br>
+         a podoba nam sie robienie muzyczki więc to robimy<br><br>
+
+
+     A tu masz na youtubie suby <br>
+     lepiej subuj bo killek <br><br>
+<img src="https://yt3.ggpht.com/a/AATXAJyaSs9SjVCZFPq0buea_y-D6OO0FMFAA91BUA=s100-c-k-c0xffffffff-no-rj-mo" alt="" srcset=""><br><br>
+     <div id="odometer" class="odometer">0</div>
+    </div>
+    
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 id="portfolio"></h1>
+<h1></h1>
+<div class="portfolio">
+    <h2>Co robimy</h2>
+    <div class="text">
+        No ogólnie to robimy muzyke jak mowiliśmy więc masz tuaj pare bangerów 
+        <h1></h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EboH3-DfD2U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oAbdwoaMpfE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+<br>
+<br>
+<h1 id="kolbudzka16"></h1>
+<h1></h1>
+<div class="kolbudzka16"> 
+
+    <h2>#Kolbudzka16</h2>
+ 
+     <div class="text">
+         
+         <h1></h1>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/0VyhSELZ2Co" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br>
+      <br>
+       <a href='https://www.siepomaga.pl/hot16challenge' title='Siepomaga.pl - zbiórki charytatywne'>
+<iframe frameborder='0' height='370px' scrolling='no' src='https://www.siepomaga.pl/hot16challenge/skarbonka/banner' width='300px'></iframe>
+</a>
+         </div>
+ 
+ </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<br>
+<br>
+
+</body>
+
+
+</html>

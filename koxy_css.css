@@ -1,0 +1,71 @@
+body{
+    background-color: black;
+    font-family: sans-serif;
+
+}
+.nav{
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(2, 8, 22);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0px 0%;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+
+}
+.koxy{
+
+    margin-left: 20px;
+    font-size: 40px;
+    color: white;
+
+
+}
+a{
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    transition-duration: 0.3s;
+
+    
+}
+
+.links li{
+    display: inline-block;
+    
+}
+.links li{
+    color: white;
+
+    display: inline-block;
+    transition-property: color, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: none;
+    margin-right: 50px;
+    
+
+}
+.links li a:hover{
+    
+    
+    color: rgb(255, 0, 0);
+    transform: scale(1.1);
+    cursor: default;
+
+}
+.links li:hover{
+    
+    
+    color: rgb(255, 0, 0);
+    transform: scale(1.1);
+    cursor: default;
+
+}
